@@ -62,6 +62,7 @@ def dijkstra (graf, src, dst):
         Q.remove(u)
 
         for p in Q:
+          if graf[u][p] =! float('inf') #it means they're directly connected
             if distance[p] > distance[u] + graf[u][p]:
                 distance[p] = distance[u] + graf[u][p]
                 previous[p] = u
